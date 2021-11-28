@@ -21,7 +21,7 @@ contract myNFT is ERC721URIStorage{
 
         _safeMint(msg.sender, newItemID);
 
-        _setTokenURI(newItemID,"https://jsonkeeper.com/b/FC5W");
+        _setTokenURI(newItemID,data:application/json;base64,eyJuYW1lIjoiQXJwaXQtS2hhbmRlbHdhbCIsImRlc2NyaXB0aW9uIjoiT25saW5lIGNsYXNzZXMgc3VjayIsImltYWdlIjoiPHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHByZXNlcnZlQXNwZWN0UmF0aW89InhNaW5ZTWluIG1lZXQiIHZpZXdCb3g9IjAgMCAzNTAgMzUwIj4KICAgIDxzdHlsZT4uYmFzZSB7IGZpbGw6IHdoaXRlOyBmb250LWZhbWlseTogc2VyaWY7IGZvbnQtc2l6ZTogMTRweDsgfTwvc3R5bGU+CiAgICA8cmVjdCB3aWR0aD0iMTAwJSIgaGVpZ2h0PSIxMDAlIiBmaWxsPSJibGFjayIgLz4KICAgIDx0ZXh0IHg9IjUwJSIgeT0iNTAlIiBjbGFzcz0iYmFzZSIgZG9taW5hbnQtYmFzZWxpbmU9Im1pZGRsZSIgdGV4dC1hbmNob3I9Im1pZGRsZSI+R2V0TWVBbkludGVybnNoaXA8L3RleHQ+Cjwvc3ZnPiJ9);
 
         console.log("NFT with ID %s is minted to %s", newItemID,msg.sender);
         _tokenIds.increment();
