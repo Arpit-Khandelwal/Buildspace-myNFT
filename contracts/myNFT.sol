@@ -23,6 +23,7 @@ contract myNFT is ERC721URIStrorage{
 
         _setTokenURI(newItemID,"https://jsonkeeper.com/b/FC5W");
 
+        console.log("NFT with ID %s is minted to %s", newItemID,msg.sender);
         _tokenIds.increment();
     }
 }
