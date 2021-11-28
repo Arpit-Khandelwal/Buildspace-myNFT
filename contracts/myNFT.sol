@@ -21,7 +21,8 @@ contract myNFT is ERC721URIStrorage{
 
         _safeMint(msg.sender, newItemID);
 
-        _setTokenURI(newItemID,"this is the NFT data");
+        _setTokenURI(newItemID,"https://jsonkeeper.com/b/FC5W");
+
         _tokenIds.increment();
     }
 }
