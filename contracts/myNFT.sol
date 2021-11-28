@@ -16,5 +16,12 @@ contract myNFT is ERC721URIStrorage{
         console.log("my first NFT");
     }
 
-    
+    function makeNFT() public{
+        uint256 newItemID = _tokenIds.current();
+
+        _safeMint(msg.sender, newItemID);
+
+        _setTokenURI(newItemID,"this is the NFT data");
+        _tokenIds.increment();
+    }
 }
