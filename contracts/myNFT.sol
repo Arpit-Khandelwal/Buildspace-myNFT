@@ -19,7 +19,7 @@ contract myNFT is ERC721URIStorage{
 
     string[] randomWords = ["This", "is" ,"A", "Random", "Word", "SpongeBob", "Squarepants", "Rebecca", "Netflix", "Terminator", "Slicer","Ninja", "cow", "Robot", "lmao" ];
 
-
+    event NewNFTMinted(address sender, uint256 tokenId);
     constructor() ERC721("Arpit's First NFT", "ARP"){
         console.log("calling constructor");
     }
@@ -72,5 +72,7 @@ contract myNFT is ERC721URIStorage{
 
         console.log("NFT with ID %s is minted to %s", newItemID,msg.sender);
         _tokenIds.increment();
+
+        emit NewNFTMinted(msg.sender, newItemID);
     }
 }
