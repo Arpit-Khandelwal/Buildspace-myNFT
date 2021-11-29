@@ -1,13 +1,9 @@
-## Running React on Repl.it
+## Get Randomized NFTs free.
 
-[React](https://reactjs.org/) is a popular JavaScript library for building user interfaces.
+1. Open my <a href= "https://nft-starter-project.arpit-khandelwa.repl.co/">website</a>
 
-[Vite](https://vitejs.dev/) is a blazing fast frontend build tool that includes features like Hot Module Reloading (HMR), optimized builds, and TypeScript support out of the box.
+2. Connect your Metamask account
 
-Using the two in conjunction is one of the fastest ways to build a web app.
+3. Click "Mint NFT"
 
-### Getting Started
-- Hit run
-- Edit [App.jsx](#src/App.jsx) and watch it live update!
-
-By default, Replit runs the `dev` script, but you can configure it by changing the `run` field in the `.replit` file.
+4. Approve the txn on metamask and check Console for txn verification
