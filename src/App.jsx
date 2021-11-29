@@ -34,16 +34,13 @@ const App = () => {
   }
 
   const connectWallet = async () => {
-    const Web3 = require("web3");
-    try {
-      if (window.ethereum) {
-    await window.ethereum.send('eth_requestAccounts');
-    window.web3 = new Web3(window.ethereum);
-    alert("metamask connected");
-  }
-  else{
-    alert("metamask not found")
-  }
+     try {
+      const { ethereum } = window;
+
+      if (!ethereum) {
+        alert("Get MetaMask!");
+        return;
+      }
       /*
       * Fancy method to request access to account.
       */
