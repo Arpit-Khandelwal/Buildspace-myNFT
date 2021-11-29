@@ -7,6 +7,8 @@ import "@openzeppelin/contracts/utils/Counters.sol";
 import "hardhat/console.sol";
 import "hardhat/console.sol";
 
+import { Base64 } from "./libraries/Base64.sol";
+
 contract myNFT is ERC721URIStorage{
 
     using Counters for Counters.Counter;
