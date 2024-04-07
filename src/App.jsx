@@ -61,11 +61,14 @@ const setupEventListener = async () => {
     // Most of this looks the same as our function askContractToMintNft
     try {
       const { ethereum } = window;
+      let signer = null;
 
+      let provider;
       if (ethereum) {
         // Same stuff again
-        const provider = new ethers.providers.Web3Provider(ethereum);
-        const signer = provider.getSigner();
+        provider = new ethers.BrowserProvider(window.ethereum)
+        signer = await provider.getSigner();
+        
         const connectedContract = new ethers.Contract(CONTRACT_ADDRESS, myNFT.abi, signer);
 
         // THIS IS THE MAGIC SAUCE.
@@ -91,9 +94,12 @@ const setupEventListener = async () => {
 
     try {
       const { ethereum } = window;
+      let signer = null;
+
+      let provider;
       if (ethereum) {
-        const provider = new ethers.providers.Web3Provider(ethereum);
-        const signer = provider.getSigner();
+        provider = new ethers.BrowserProvider(window.ethereum)
+        signer = await provider.getSigner();
         const connectedContract = new ethers.Contract(CONTRACT_ADDRESS, myNFT.abi, signer);
 
         console.log("approve txn on Metamask");
